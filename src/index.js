@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import Header from './components/header';
+import Footer from './components/footer';
+import RadioPlayer from './components/radio_player';
 
-import App from './components/app';
-import reducers from './reducers';
+// Main class for the React application
+class App extends Component {
+  constructor(props) {
+    super(props);
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+    this.state = {
+      curPage: null
+    };
+  }
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+  render() {
+    return (
+      <div>
+        <Header /> // -> The header object is rendered
+        <RadioPlayer /> // -> The radio gets rendered
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.querySelector('.react-container'));

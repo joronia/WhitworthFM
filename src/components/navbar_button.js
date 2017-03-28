@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-// This class models the footer for the page
-class Footer extends Component {
+// This class models the button in the header
+class NavbarButton extends Component {
   constructor(props) {
     super(props);
 
@@ -12,4 +12,4 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+export default NavbarButton;
