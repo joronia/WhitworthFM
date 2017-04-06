@@ -16,8 +16,9 @@ class App extends Component {
 
   render() {
     return (
+	// -> The header object is rendered
       <div>
-        <Header /> // -> The header object is rendered
+        <Header /> 
         <RadioPlayer /> // -> The radio gets rendered
       </div>
     );
