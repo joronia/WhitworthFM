@@ -284,7 +284,7 @@ a:hover, a:focus {
     margin-bottom: 0;
     padding-top: 10vh;
     width: auto;
-    position: absolute;
+    position: relative;
     right: 0;
     left: inherit;
 }
@@ -515,4 +515,19 @@ a:hover, a:focus {
     .player .show img {
         width: 55px;
     }
+}
+
+#twitterIcon {
+    height: 4vh;
+    width: 3vw;
+}
+
+#facebookIcon {
+    height: 4vh;
+    width: 3vw;
+}
+
+#instagramIcon {
+    height: 4vh;
+    width: 3vw;
 }
