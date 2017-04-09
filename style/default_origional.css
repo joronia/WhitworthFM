@@ -1,0 +1,482 @@
+@font-face {
+    font-family: RobotoWeb;
+    src: url('fonts/Roboto-Regular-webfont.eot');
+    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Regular-webfont.woff') format('woff'), url('fonts/Roboto-Regular-webfont.ttf') format('truetype'), url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RobotoLightWeb;
+    src: url('fonts/Roboto-Light-webfont.eot');
+    src: url('fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Light-webfont.woff') format('woff'), url('fonts/Roboto-Light-webfont.ttf') format('truetype'), url('fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RobotoBoldWeb;
+    src: url('fonts/Roboto-Bold-webfont.eot');
+    src: url('fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Bold-webfont.woff') format('woff'), url('fonts/Roboto-Bold-webfont.ttf') format('truetype'), url('fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RobotoCondensedWeb;
+    src: url('fonts/Roboto-Condensed-webfont.eot');
+    src: url('fonts/Roboto-Condensed-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Condensed-webfont.woff') format('woff'), url('fonts/Roboto-Condensed-webfont.ttf') format('truetype'), url('fonts/Roboto-Condensed-webfont.svg#robotocondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
+    margin: 0;
+    width: 100vw;
+    height: 85vh;
+    overflow: hidden;
+    margin-top: 15vh;
+    color:#444444;
+    font-family: RobotoWeb;
+
+    /* Fix for IE booooo! */
+/*    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+*/
+}
+
+.react-container {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.radio-player {
+  width: 100%;
+  height: 85vh;
+  margin: 0%;
+  float: none;
+
+  background: url('/src/img/back.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+
+/*gives the font and background color of the navbar buttons*/
+a {
+    font-family: RobotoBoldWeb;
+    font-size: 14px;
+    cursor: pointer;
+    color:#444444;
+    text-decoration: none;
+}
+
+/*gives some characteristics to the buttons*/
+a:hover, a:focus {
+    text-decoration: none !important;
+}
+
+/*No idea what this does*/
+.flex {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.center {
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.center-horizontal {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.center-vertical {
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.flex-column {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.space-between {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.flex-one {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;
+}
+.flex-two {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;
+}
+
+.flex-three {
+    -webkit-box-flex: 3;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 3;         /* OLD - Firefox 19- */
+    -webkit-flex: 3;          /* Chrome */
+    -ms-flex: 3;              /* IE 10 */
+    flex: 3;
+}
+
+.header,
+.header * {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+
+.header {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+    height: 15vh;
+    background-color: #222222;
+    box-shadow: 0 0 0 rgba(0,0,0,.15);
+}
+
+/*Gives padding and color to navbar members*/
+.header a {
+    padding: .75vw 2.25vw;
+    color:#FFFFFF; /*color of fonts*/
+}
+
+
+
+.header a.selected {
+    background-color: #FF4D4D;
+}
+
+.header .mini-player {
+    float: left;
+    position: relative;
+    height: 110px;
+    overflow: hidden;
+}
+
+.header .mini-player h4 {
+    padding: 10px 25px;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 1;
+}
+
+.header .mini-player audio {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+    max-height: 30px;
+    max-width: 300px;
+}
+
+.header .mini-player h4 span {
+    color: #DDDDDD;
+}
+
+.header .mini-player img {
+    opacity: .75;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header .logo {
+    padding-top: 20px;
+    float: left;
+}
+
+.header .logo a:hover {
+    background-color: transparent;
+}
+
+.header img {
+    margin-right: 15px;
+}
+
+.header .navbar {
+    position: relative;
+}
+
+.header .nav {
+    margin-bottom: 0;
+    padding-top: 10vh;
+    width: auto;
+    position: relative;
+    right: 0;
+    left: inherit;
+}
+
+.header .row-fluid {
+    padding: 11px;
+}
+
+.page {
+    width:100%;
+    height: auto;
+    min-height: 100%;
+}
+
+.player {
+    width:100%;
+    height: 100px;
+    position: relative;
+}
+
+.player > .container {
+    height: 100%;
+    padding-top: 110px;
+}
+
+.player .song {
+    margin-top: -125px;
+}
+
+.player .song h1 {
+    font-size: 55px;
+    color: #FF4D4D;
+    padding-bottom: 10px;
+    line-height: 50px;
+}
+
+.player .song h1,
+.player .song h2,
+.player .song h3 {
+    text-transform: capitalize;
+}
+
+.player .title {
+    padding-top: 40px;
+}
+
+.player .title > div:first-of-type img {
+    float:left;
+    padding: 10px;
+}
+
+.player .show {
+    float:right;
+}
+
+.player .show img {
+    width: 75px;
+    margin-right: 10px;
+    float: left;
+}
+
+.player .show > div {
+    float:left;
+}
+
+.player .show > div h4 {
+    display: block;
+}
+
+.player .show h2 span {
+    display: none;
+}
+
+.player .album-art {
+    float:right;
+    width: 300px;
+    clip-path: url(#circle-mask);
+}
+
+.player .down {
+    position: absolute;
+    right: 1%;
+    bottom: 2%;
+}
+
+.player .down img {
+    cursor: pointer;
+}
+
+.player .down h4 {
+    color:#FFFFFF;
+    float: left;
+    padding: 20px;
+}
+
+/* Join Page */
+.join {
+    height: 100% !important;
+    padding-top: 110px;
+}
+
+.join > .container {
+    height: 100%;
+}
+
+.join .back {
+    background-color: #FFFFFF;
+    margin-top: 10%;
+    padding: 50px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.join .download {
+    width: 100%;
+    text-align: center;
+    background-color: #FF4D4D;
+    padding: 15px;
+}
+
+.join .download:active {
+    background-color: #444444;
+}
+
+.join .download a {
+    display: block;
+    width:275px;
+    margin: auto;
+}
+
+.join .download h4 {
+    color:#ffffff;
+}
+
+.join .download img {
+    float:left;
+    margin-right: 10px;
+}
+
+.join .description h4 {
+    color:#999999;
+}
+
+.join h1 {
+    font-family: 'RobotoBoldWeb';
+    font-size: 45px;
+    line-height: 50px;
+}
+
+.join .email h3 {
+    text-align: center;
+}
+
+.join .email h3:first-of-type {
+    line-height: 55px;
+}
+
+.join .email h3:last-of-type a,
+.join .email h3:last-of-type {
+    color: #FF4D4D;
+    font-size:20px;
+    line-height: 25px;
+}
+
+
+@media (max-width: 767px) {
+    h1, h2, h3 {
+        line-height: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    .player .album-art {
+        max-width: 100px;
+        margin-right: 15px;
+    }
+
+    .player .title {
+        padding-top: 0;
+    }
+
+
+    .player .show {
+        padding: 0 15px;
+    }
+
+    .player .song h2 {
+    }
+
+    .player .song h1 {
+        font-size: 35px;
+        padding-bottom: 5px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header {
+        height: 70px;
+    }
+
+    .header .nav {
+        padding-top: 41px;
+    }
+
+    .header img {
+        height: 35px;
+    }
+
+    .player .show > div h4 {
+        display: none;
+    }
+
+    .player .show h2 {
+        padding-top: 10px;
+    }
+
+    .player .show h2 span {
+        display: inline-block;
+        font-size: 15px;
+    }
+
+    .player .show img {
+        width: 55px;
+    }
+}
+
+#twitterIcon {
+    height: 4vh;
+    width: 3vw;
+}
+
+#facebookIcon {
+    height: 4vh;
+    width: 3vw;
+}
+
+#instagramIcon {
+    height: 4vh;
+    width: 3vw;
+}

@@ -1,0 +1,152 @@
+@font-face {
+    font-family: RobotoWeb;
+    src: url('fonts/Roboto-Regular-webfont.eot');
+    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Regular-webfont.woff') format('woff'), url('fonts/Roboto-Regular-webfont.ttf') format('truetype'), url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RobotoLightWeb;
+    src: url('fonts/Roboto-Light-webfont.eot');
+    src: url('fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Light-webfont.woff') format('woff'), url('fonts/Roboto-Light-webfont.ttf') format('truetype'), url('fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RobotoBoldWeb;
+    src: url('fonts/Roboto-Bold-webfont.eot');
+    src: url('fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Bold-webfont.woff') format('woff'), url('fonts/Roboto-Bold-webfont.ttf') format('truetype'), url('fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RobotoCondensedWeb;
+    src: url('fonts/Roboto-Condensed-webfont.eot');
+    src: url('fonts/Roboto-Condensed-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Condensed-webfont.woff') format('woff'), url('fonts/Roboto-Condensed-webfont.ttf') format('truetype'), url('fonts/Roboto-Condensed-webfont.svg#robotocondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
+    margin: 0;
+    width: 100vw;
+    height: 85vh;
+    overflow: hidden;
+    margin-top: 15vh;
+    color:#444444;
+    font-family: RobotoWeb;
+
+    /* Fix for IE booooo! */
+/*    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+*/
+}
+
+.react-container {
+  width: 100vw;
+  height: 0vh;
+  text-align: center;
+}
+
+.radio-player {
+  width: 100vw;
+  height: 85vh;
+  margin: 0;
+  float: none;
+
+  background: url('/src/img/back.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+
+/*gives the font and background color of the navbar buttons*/
+a {
+    font-family: RobotoBoldWeb;
+    font-size: 2vh;
+    cursor: pointer;
+    color:#444444;
+    text-decoration: none;
+}
+
+/*gives some characteristics to the buttons*/
+a:hover, a:focus {
+    text-decoration: none !important;
+}
+
+.header {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+    height: 15vh;
+    background-color: #222222;
+    box-shadow: 0 0 0 rgba(0,0,0,.15);
+}
+
+/*Gives padding and color to navbar members*/
+.header a {
+    padding: .75vw 2.25vw;
+    color:#FFFFFF; /*color of fonts*/
+}
+/*On button hover, adds the highlighting red feature*/
+.header a:hover {
+    color: #FFFFFF;
+    background-color: #FF4D4D;
+}
+
+.header a.selected {
+    background-color: #FF4D4D;
+}
+
+/*WhitworthFM's logo position*/
+.header .logo {
+    padding-top: 2.5vh;
+	width: 3vw;
+    float: left;
+}
+
+
+
+.header .navbar {
+    position: relative;
+	text-align: center;
+}
+/*Our nav bar and it's position*/
+.header .nav {
+    margin-bottom: 0;
+    padding-top: 10vh;
+    width: 100vw;
+}
+
+
+.page {
+    width:100vw;
+    height: 100vh;
+}
+
+
+
+#twitterIcon {
+    height: 4vh;
+    width: 3vw;
+}
+
+#facebookIcon {
+    height: 4vh;
+    width: 3vw;
+}
+
+#instagramIcon {
+    height: 4vh;
+    width: 3vw;
+}
