@@ -10,10 +10,8 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="header ng-scope">
-        <div className="container">
+      <div className="header">
           <Navbar />
-        </div>
       </div>
     )
   }
