@@ -99,6 +99,25 @@ h5 {
 .nav-item-wrapper {
   width: 100vw;
   height: 100vh;
+  list-style: none;
+}
+
+.nav-item-wrapper li:hover {
+  color: #FFFFFF;
+  background-color: #FF4D4D;
+}
+
+.nav-item-wrapper li.selected {
+  background-color: #FF4D4D;
+}
+
+.header a.selected {
+    background-color: #FF4D4D;
+}
+
+.nav-item:hover {
+  color: #FFFFFF;
+  background-color: #FF4D4D;
 }
 
 .nav {
@@ -182,12 +201,12 @@ li:hover, li:focus {
     z-index: 1;
     height: 15vh;
     box-shadow: 0 0 0 rgba(0,0,0,.15);
-    margin-top: 6vh;
+    margin-top: 2vh;
 }
 
 .navbar {
-  width: 100vw;
-  height: 100vh;
+  width: 50%;
+  height: 100%;
   text-align: center;
   vertical-align: center;
   display: block;
@@ -203,14 +222,16 @@ li:hover, li:focus {
 }
 
 .logo {
-  width: 25vw;
+  width: 25%;
   margin: 0 auto;
   position: relative;
+  height: 100%;
+  justify-content: center;
 }
 
 .logo img {
   max-width: 7vw;
-  max-height: 20vh;
+  max-height: 100%;
   width: auto;
   height: auto;
   display: block;
@@ -220,13 +241,5 @@ li:hover, li:focus {
     padding: .5vw 1.5vw;
     color:#FFFFFF;
     float: left;
-}
-.nav-item:hover, li:hover {
-    color: #FFFFFF;
-    background-color: #FF4D4D;
-}
-
-.nav-item:hover, li:hover {
-    background-color: #FF4D4D;
 }
 

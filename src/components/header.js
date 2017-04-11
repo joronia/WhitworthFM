@@ -12,6 +12,9 @@ class Header extends Component {
     return (
       <div className="header">
           <Navbar />
+		  <div className="logo">           
+            <img src='/src/img/home_logo.png'/>            
+		</div>
       </div>
     )
   }
