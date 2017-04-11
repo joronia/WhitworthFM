@@ -12,7 +12,6 @@ class Navbar extends Component {
 		    <li><Link className="nav-item" to="/contact">Contact</Link></li>
 	      </ul>
 	    </div>    
-  
         <Link to="/" className="logo">
           <img src='/src/img/home_logo.png'/>
         </Link> 
