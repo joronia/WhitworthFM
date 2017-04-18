@@ -9,8 +9,7 @@ class Podcasts extends Component {
 
   render() {
     return(
-	  <div>
-	    <StaticBackground />
+	  <div>	    
         <div className="podcasts">
           <div>Test Podcasts</div>
         </div>

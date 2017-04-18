@@ -11,10 +11,10 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-          <Navbar />
-		  <div className="logo">           
-            <img src='/src/img/home_logo.png'/>            
-		</div>
+        <Navbar page={this.props.page}/>
+        <div className="logo">           
+          <img src='/src/img/home_logo.png'/>            
+        </div>
       </div>
     )
   }

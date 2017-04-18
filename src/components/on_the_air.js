@@ -10,7 +10,6 @@ class OnTheAir extends Component {
   render() {
     return(
 	  <div>
-	    <StaticBackground />
         <div className="on-the-air">
           <div>Test On The Air</div>
         </div>

@@ -107,18 +107,11 @@ h5 {
   background-color: #FF4D4D;
 }
 
-.nav-item-wrapper li.selected {
-  background-color: #FF4D4D;
-}
-
-.header a.selected {
-    background-color: #FF4D4D;
-}
-
 .nav-item:hover {
   color: #FFFFFF;
   background-color: #FF4D4D;
 }
+
 
 .nav {
 	width: 100%;

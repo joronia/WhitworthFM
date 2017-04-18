@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 
 import StaticBackground from './components/static_background';
 import Footer from './components/footer';
@@ -14,17 +14,19 @@ class App extends Component {
     super(props);
 
     this.state = {
-      curPage: null
+      curPage: ""
     };
   }
 
   render() {
     return (
-	<Router history={hashHistory}>
-      <Route exact path="/" component={OnTheAir} />
-      <Route path="/podcasts" component={Podcasts} />
-	  <Route path="/contact" component={Contact} />
-    </Router>
+	  <Router history={hashHistory}>
+        <Route exact path="/" component={StaticBackground}>
+		  <IndexRoute component={OnTheAir}/>
+		  <Route path="/podcasts" component={Podcasts} />
+	      <Route path="/contact" component={Contact} />
+		</Route>      
+      </Router>
     );
   }
 }

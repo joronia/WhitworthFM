@@ -10,7 +10,6 @@ class Contact extends Component {
   render() {
     return(
       <div>
-	    <StaticBackground />
         <div className="contact">
           <div>Test Contact</div>
         </div>

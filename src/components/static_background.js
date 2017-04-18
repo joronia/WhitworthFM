@@ -10,9 +10,14 @@ class StaticBackground extends Component {
 
   render() {
     return(
-      <div className="background">
-        <Header />
-      </div>
+	    <div>
+        <div className="background">
+          <Header />		
+        </div>	  
+	    <div className = "content">
+		    { this.props.children } 
+	    </div>
+	  </div>
     );
   }
 }
