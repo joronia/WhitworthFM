@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StaticBackground from './static_background';
+import Schedule from './schedule';
 
 class Podcasts extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Podcasts extends Component {
     return(
 	  <div>	    
         <div className="podcasts">
-          <div>Test Podcasts</div>
+          <Schedule />
         </div>
 	  </div>
     );
