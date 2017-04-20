@@ -35,7 +35,7 @@ html, body {
     margin: 0;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow: scroll;
     color:#444444;
     font-family: RobotoWeb;
   
@@ -206,7 +206,7 @@ li:hover, li:focus {
 }
 
 .navbar {
-  width: 50%;
+  width: 33%;
   height: 100%;
   text-align: center;
   vertical-align: center;
@@ -215,17 +215,15 @@ li:hover, li:focus {
 }
 
 .social-icons {
-  width: 25%;
+  width: 33%;
   height: 100%;
   float: right;
   display: inline-block;
 }
 
 .social-icons img {
-  min-width: 3vw;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+  width: 40px;
+  height: 40px;
   display: block;
 }
 
@@ -237,6 +235,7 @@ li:hover, li:focus {
   list-style: none;
   width: 100%;
   height: 100%;
+  float: left;
 }
 
 .nav-item-wrapper {
@@ -249,7 +248,7 @@ li:hover, li:focus {
 }
 
 .logo {
-  width: 25%;
+  width: 33%;
   margin: 0 auto;
   position: relative;
   height: 100%;
@@ -263,6 +262,7 @@ li:hover, li:focus {
   width: auto;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 .nav-item, li {
