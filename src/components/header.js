@@ -12,8 +12,15 @@ class Header extends Component {
     return (
       <div className="header">
         <Navbar page={this.props.page}/>
-        <div className="logo">           
-          <img src='/src/img/home_logo.png'/>            
+        <div className="logo">
+          <img src='/src/img/home_logo.png'/>
+        </div>
+        <div className="social-icons">
+          <ul>
+            <li><img src='/src/img/home_logo.png'/></li>
+            <li><img src='/src/img/home_logo.png'/></li>
+            <li><img src='/src/img/home_logo.png'/></li>
+          </ul>
         </div>
       </div>
     )
