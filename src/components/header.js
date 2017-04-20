@@ -17,9 +17,9 @@ class Header extends Component {
         </div>
         <div className="social-icons">
           <ul>
-            <li><img src='/src/img/home_logo.png'/></li>
-            <li><img src='/src/img/home_logo.png'/></li>
-            <li><img src='/src/img/home_logo.png'/></li>
+            <li><img src='/src/img/facebook.png'/></li>
+            <li><img src='/src/img/twitter.png'/></li>
+            <li><img src='/src/img/instagram.png'/></li>
           </ul>
         </div>
       </div>

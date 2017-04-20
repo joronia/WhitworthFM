@@ -242,6 +242,7 @@ li:hover, li:focus {
   float: left;
   display: table-cell;
   vertical-align: center;
+  padding-left: 0;
 }
 
 .logo {
