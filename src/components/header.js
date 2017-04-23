@@ -17,9 +17,9 @@ class Header extends Component {
         </div>
         <div className="social-icons">
           <ul>
-            <li><img src='/src/img/facebook.png'/></li>
-            <li><img src='/src/img/twitter.png'/></li>
-            <li><img src='/src/img/instagram.png'/></li>
+            <li> <a href="https://www.facebook.com/Whitworthfm/"> <img src='/src/img/facebook.png'/></a></li>
+            <li> <a href="https://twitter.com/whitworthfm?lang=en"> <img src='/src/img/twitter.png'/> </a></li>
+            <li> <a href="https://www.instagram.com/whitworthfm/"> <img src='/src/img/instagram.png'/></a></li>
           </ul>
         </div>
       </div>
