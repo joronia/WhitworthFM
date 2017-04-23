@@ -18,7 +18,8 @@ button.rbc-input::-moz-focus-inner {
 }
 .rbc-calendar {
   box-sizing: border-box;
-  height: 100vh;
+  height: 100vh; 
+  background-color: grey;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
