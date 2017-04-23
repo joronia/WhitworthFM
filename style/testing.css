@@ -41,24 +41,11 @@ body {
     margin: 0 auto;
     width: 100vw;
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     color:#FFF;
     padding: 3vw
     font-family: RobotoWeb;
-}
-
-body::-webkit-scrollbar {
-    width: 1vw;
-}
-
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-  
-body::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
 }
   
     /* Fix for IE booooo! */
@@ -68,19 +55,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .react-container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   text-align: center;
 }
 
 .background {
-<<<<<<< HEAD
   width: 100%;
-  height: 100%; /*change to 100vh when */
-=======
-  width: 100vw;
-  height: 100vh;
->>>>>>> c5d4221c3f7a3d656aaaf8fca9022cd6a6814d09
+  height: 100%;
   margin: 0 auto;
   position: relative;
 
@@ -277,11 +259,7 @@ li:hover, li:focus {
 }
 
 .logo {
-<<<<<<< HEAD
   width: 19%;
-=======
-  width: 33vw;
->>>>>>> c5d4221c3f7a3d656aaaf8fca9022cd6a6814d09
   margin: 0 auto;
   position: relative;
   height: 100%;
@@ -327,4 +305,10 @@ li:hover, li:focus {
   width: 30%;
   height: 70vh;
   margin-top: 17vh;
+  overflow: overlay;
+}
+
+.react-container {
+  width: 100%;
+  height: 100%;  
 }

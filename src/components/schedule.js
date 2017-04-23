@@ -7,14 +7,12 @@ import events from './events';
 // to the correct localizer.
 BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
 
-const Schedule = props => (
-  <div>
+const Schedule = props => (  
     <BigCalendar
       events={events}
       startAccessor='startDate'
       endAccessor='endDate'
-    />
-  </div>
+    />  
 );
 
 export default Schedule;
