@@ -13,7 +13,7 @@ class Header extends Component {
       <div className="header">
         <Navbar page={this.props.page}/>
         <div className="logo">
-          <img src='/src/img/home_logo.png'/>
+          <img src='/src/img/Long_White_Transparent.png'/>
         </div>
         <div className="social-icons">
           <ul className="social-list">

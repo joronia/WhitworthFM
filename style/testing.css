@@ -74,8 +74,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .background {
+<<<<<<< HEAD
   width: 100%;
   height: 100%; /*change to 100vh when */
+=======
+  width: 100vw;
+  height: 100vh;
+>>>>>>> c5d4221c3f7a3d656aaaf8fca9022cd6a6814d09
   margin: 0 auto;
   position: relative;
 
@@ -134,11 +139,11 @@ h5 {
   background-color: #FF4D4D;
 }
 
-
 .nav {
 	width: 100%;
 	height: 100%;
 }
+
 
 li:hover, li:focus {
     text-decoration: none !important;
@@ -272,7 +277,11 @@ li:hover, li:focus {
 }
 
 .logo {
+<<<<<<< HEAD
   width: 19%;
+=======
+  width: 33vw;
+>>>>>>> c5d4221c3f7a3d656aaaf8fca9022cd6a6814d09
   margin: 0 auto;
   position: relative;
   height: 100%;
