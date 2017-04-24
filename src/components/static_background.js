@@ -34,6 +34,17 @@ class StaticBackground extends Component {
           <div className="radio-play-pause">
             <img id="play-pause-img" src='/src/img/radio_play.png' onClick={this.onPlayPauseClick}/>
           </div>
+          <div className="middle-of-bar">
+            <div className="song-title">
+              Test Song Title
+            </div>
+            <div className="song-length-bar">
+
+            </div>
+            <div className="song-length">
+              00:00
+            </div>
+          </div>
         </div>
       </div>
     );

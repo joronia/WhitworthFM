@@ -105,12 +105,11 @@ h5 {
   list-style: none;
 }
 
-.nav-item-wrapper li:hover {
-  color: #FFFFFF;
-  background-color: #FF4D4D;
+.nav-item-wrapper > li {
+  
 }
 
-.nav-item:hover {
+.nav-item-wrapper a:hover {
   color: #FFFFFF;
   background-color: #FF4D4D;
 }
@@ -270,9 +269,11 @@ li:hover, li:focus {
 }
 
 .nav-item, li {
-    padding: .5vw 1.5vw;
-    color:#FFFFFF;
-    float: left;
+  padding: 1vw 1.25vw;
+  color: #FFFFFF;
+  float: left;
+  font-size: 16px;
+  display: block;
 }
 
 .content {
@@ -315,13 +316,13 @@ li:hover, li:focus {
   float: left;
   position: relative;
   height: 100%;
-  width: 10%;
+  width: 5%;
   display: inline-block;
   text-align: center;
 }
 
 .radio-play-pause img {
-  width: 15%;
+  width: 30%;
   height: auto;
   vertical-align: middle;
   position: absolute;
@@ -329,4 +330,30 @@ li:hover, li:focus {
   top: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+}
+
+.middle-of-bar {
+  width: 85%;
+  height: 60%;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.song-length-bar {
+  width: 100%;
+  height: 15%;
+  background: darkgrey;
+  position: absolute;
+  bottom: 20%;
+}
+
+.song-title {
+  float: left;
+}
+
+.song-length {
+  float: right;
 }
