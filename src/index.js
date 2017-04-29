@@ -11,11 +11,7 @@ import Contact from './components/contact';
 // Main class for the React application
 class App extends Component {
   constructor(props) {
-    super(props);
-
-    this.state = {
-      curPage: ""
-    };
+    super(props);    
   }
 
   render() {
@@ -25,7 +21,7 @@ class App extends Component {
 		  <IndexRoute component={OnTheAir}/>
 		  <Route path="/podcasts" component={Podcasts} />
 	      <Route path="/contact" component={Contact} />
-		</Route>      
+		</Route>
       </Router>
     );
   }

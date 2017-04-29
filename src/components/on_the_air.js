@@ -9,15 +9,14 @@ class OnTheAir extends Component {
 
 
   render() {
-    return(	  
-      <div className="on-the-air">   
+    return(
+      <div className="on-the-air">
         <div className="player">
-        
         </div>
         <div className="schedule">
           <Schedule />
-        </div>
-      </div>	  
+        </div>        
+      </div>
     );
   }
 }
