@@ -291,6 +291,7 @@ li:hover, li:focus {
 .player {
   width: 50%;
   height: 90%;
+  margin-top: 17vh;
   float: left;
 }
 
