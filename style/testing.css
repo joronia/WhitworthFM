@@ -300,61 +300,47 @@ li:hover, li:focus {
   width: 30%;
   height: 70vh;
   margin-top: 17vh;
-  overflow: overlay;
+  /*overflow: overlay;*/
+}
+.contactBox  {
+	width: 55%;
+	border: none;
+	height: 55vh;
+	margin-top: 17vh;
+	background-color: white;
+	display: inline-block;
+	padding: 5vh;
+	
 }
 
-.bottom-bar {
-  position: absolute;
-  bottom: 2px;
-  height: 8%;
-  width: 100%;
-  left: 0px;
-  background: grey;
+.joinTeam h1 {
+	color: black;
+	float: left;
 }
 
-/* CSS for the play and pause button for the radio */
-.radio-play-pause {
-  float: left;
-  position: relative;
-  height: 100%;
-  width: 5%;
-  display: inline-block;
-  text-align: center;
+.downloadForm {
+	width: 40vw;
+	height: 5vh;
+	border: none;
+	background-color: #FF4D4D;
+	text-align: center;
+	float: right;
 }
 
-.radio-play-pause img {
-  width: 30%;
-  height: auto;
-  vertical-align: middle;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
+.downloadForm h4 {
+	color: white;
+	font-size: 30px;
 }
 
-.middle-of-bar {
-  width: 85%;
-  height: 60%;
-  margin: 0 auto;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.downloadForm h3 {
+	color: black;
+	padding: 0.5vh;
 }
 
-.song-length-bar {
-  width: 100%;
-  height: 15%;
-  background: darkgrey;
-  position: absolute;
-  bottom: 20%;
+#gmEmail {
+	color: #FF4D4D;
 }
 
-.song-title {
-  float: left;
-}
-
-.song-length {
-  float: right;
+#gmEmail a {
+	color: #FF4D4D;
 }
