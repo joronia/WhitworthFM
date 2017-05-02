@@ -305,7 +305,7 @@ li:hover, li:focus {
 .contactBox  {
 	width: 55%;
 	border: none;
-	height: 15vh;
+	height: 20vh;
 	margin-top: 17vh;
 	background-color: white;
 	display: inline-block;
@@ -344,6 +344,10 @@ li:hover, li:focus {
 
 #gmEmail {
 	color: #FF4D4D;
+}
+
+#gmEmail h3 {
+	display: inline;
 }
 
 #gmEmail a {
