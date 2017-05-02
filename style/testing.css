@@ -305,7 +305,7 @@ li:hover, li:focus {
 .contactBox  {
 	width: 55%;
 	border: none;
-	height: 55vh;
+	height: 15vh;
 	margin-top: 17vh;
 	background-color: white;
 	display: inline-block;
@@ -323,7 +323,6 @@ li:hover, li:focus {
 	height: 5vh;
 	border: none;
 	background-color: #FF4D4D;
-	text-align: center;
 	float: right;
 }
 
@@ -332,9 +331,15 @@ li:hover, li:focus {
 	font-size: 30px;
 }
 
-.downloadForm h3 {
+#formLink {
+  color:inherit;
+  text-decoration: none;
+  cursor: auto;
+}
+
+.downloadForm #or {
 	color: black;
-	padding: 0.5vh;
+	padding: 2.5vh;
 }
 
 #gmEmail {
@@ -343,4 +348,5 @@ li:hover, li:focus {
 
 #gmEmail a {
 	color: #FF4D4D;
+  text-decoration: none;
 }
