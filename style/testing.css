@@ -307,14 +307,15 @@ li:hover, li:focus {
 	border: none;
 	height: 20vh;
 	margin-top: 17vh;
-	background-color: white;
+	/*background-color: white;*/
+	opacity: 0.8;
 	display: inline-block;
 	padding: 5vh;
 	
 }
 
 .joinTeam h1 {
-	color: black;
+	color: white;
 	float: left;
 }
 
@@ -338,7 +339,7 @@ li:hover, li:focus {
 }
 
 .downloadForm #or {
-	color: black;
+	color: white;
 	padding: 2.5vh;
 }
 
