@@ -2,7 +2,13 @@
 <html>
   <head>    
     <link rel="stylesheet" href="/style/testing.css">
-    <link rel="stylesheet" href="/style/react-big-calendar.css">                     
+    <link rel="stylesheet" href="/style/react-big-calendar.css">     
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <script>
+	  	function resizeIframe(obj) {
+	    	obj.style.width = obj.contentWindow.document.body.width + 'px';
+	  	}
+	</script>             
   </head>
   <body>
     <div class="react-container"></div>    

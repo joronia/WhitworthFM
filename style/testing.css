@@ -1,4 +1,4 @@
-@font-face {
+font-face {
     font-family: RobotoWeb;
     src: url('fonts/Roboto-Regular-webfont.eot');
     src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Roboto-Regular-webfont.woff') format('woff'), url('fonts/Roboto-Regular-webfont.ttf') format('truetype'), url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
@@ -292,15 +292,15 @@ li:hover, li:focus {
   width: 50%;
   height: 90%;
   margin-top: 17vh;
-  float: left;
+  float: left;  
 }
 
 .schedule {
-  margin-left: 70%;
-  width: 30%;
+  width: 50%;
   height: 70vh;
   margin-top: 17vh;
-  /*overflow: overlay;*/
+  overflow: hidden;
+  
 }
 .contactBox  {
 	width: 55%;
@@ -354,4 +354,26 @@ li:hover, li:focus {
 #gmEmail a {
 	color: #FF4D4D;
   text-decoration: none;
+}
+
+#waveStreamingPlayer {
+  ;
+}
+
+iframe {
+  display: block;
+}
+
+@media screen and (max-width: 1050px) {
+  .player {
+    float: none;
+    margin-right: 0;
+    width: auto;
+    height: 20vh;    
+  }
+  .schedule {
+    max-width: 700px;
+    width: auto;
+    margin: 10vh auto;
+  }
 }
