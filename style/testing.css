@@ -65,6 +65,7 @@ body {
   background-size: cover;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
     margin:0;
     font-weight: initial;
@@ -312,6 +313,19 @@ li:hover, li:focus {
 	display: inline-block;
 	padding: 5vh;
 	
+}
+
+.podcastsDesc {
+  width: 55%;
+  border: none;
+  height: 20vh;
+  margin-top: 17vh;
+  display: inline-block;
+}
+
+#toPodcast a {
+text-decoration: none;
+color: #FF4D4D;
 }
 
 .joinTeam h1 {
