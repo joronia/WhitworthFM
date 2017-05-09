@@ -378,6 +378,11 @@ iframe {
   display: block;
 }
 
+.facebookFeed {
+	padding-Top: 2vh;
+	height: 70%;
+}
+
 @media screen and (max-width: 1050px) {
   .player {
     float: none;
