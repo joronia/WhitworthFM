@@ -375,79 +375,7 @@ function formatDate(value)
 
 </script>
 <body>
-<?php
-
-
-
-$sdk = new Aws\Sdk([
-    'endpoint'   => 'https://dynamodb.us-east-2.amazonaws.com',
-    'region'   => 'us-east-2',
-    'version'  => 'latest',
-    'credentials' => [
-        'key'    => 'AKIAILI4WEMNUBJO2KEA',
-        'secret' => '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',
-    ]
-]);
-
-$dynamodb = $sdk->createDynamoDb();
-
-$marshaler = new Marshaler();
-
-//Expression attribute values
-$eav = $marshaler->marshalJson('
-    {
-        ":start_id": 0,
-        ":end_id": 1000
-    }
-');
-
-$params = [
-    'TableName' => 'schedule',
-    'ProjectionExpression' => '#id, title, description, start_time, end_time',
-    'FilterExpression' => '#id between :start_id and :end_id',
-    'ExpressionAttributeNames'=> [ '#id' => 'ID' ],
-    'ExpressionAttributeValues'=> $eav
-];
-
-$maxid = 0;
-
-try {
-    while (true) {
-        $result = $dynamodb->scan($params);
-        echo '<table name="events_table"><tr><th>ID</th><th>Title</th><th>Description</th><th>Start</th><th>End</th><th>Delete</th></tr>';
-        foreach ($result['Items'] as $i) {
-            
-            $event = $marshaler->unmarshalItem($i);
-            if($event['ID']>=$maxid){
-              $maxid = $event['ID'] + 1;
-            }
-            echo '<tr><td>'. $event['ID'] .'</td><td>'. $event['title'] .'</td><td>'. $event['description'] .'</td><td>'. $event['start_time'] .'</td><td>'. 
-            $event['end_time'] .'</td><td><form action="deleteevent.php" method="post"><input id="deleteEvent" type="submit" value="X" /><input type="hidden" name="deleteid" value="'.$event['ID'].'"></form></td></tr>';
-
-        }
-        echo '</table>';
-
-
-
-
-        if (isset($result['LastEvaluatedKey'])) {
-            $params['ExclusiveStartKey'] = $result['LastEvaluatedKey'];
-        } else {
-            break;
-        }
-    }
-
-} catch (DynamoDbException $e) {
-    echo "Unable to scan:\n";
-    echo $e->getMessage() . "\n";
-}
-
-
-
-
-?>
-
-<div id="add-event-container">
+<div id="add-event-container"><h1>Add Event</h1>
 <form action="createevent.php" method="post">
   Event Title: <input type="text" id="title" name="title"><br>
   Event Description: <input type="text" id="description" name="description"><br>
@@ -583,29 +511,85 @@ try {
 
   <input type="submit" value="Submit">
 </form>
+</div><br>
 
+<div id="events-table-container">
+<h1>Scheduled Events</h1>
+
+
+<?php
+
+
+
+$sdk = new Aws\Sdk([
+    'endpoint'   => 'https://dynamodb.us-east-2.amazonaws.com',
+    'region'   => 'us-east-2',
+    'version'  => 'latest',
+    'credentials' => [
+        'key'    => 'AKIAILI4WEMNUBJO2KEA',
+        'secret' => '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',
+    ]
+]);
+
+$dynamodb = $sdk->createDynamoDb();
+
+$marshaler = new Marshaler();
+
+//Expression attribute values
+$eav = $marshaler->marshalJson('
+    {
+        ":start_id": 0,
+        ":end_id": 1000
+    }
+');
+
+$params = [
+    'TableName' => 'schedule',
+    'ProjectionExpression' => '#id, title, description, start_time, end_time',
+    'FilterExpression' => '#id between :start_id and :end_id',
+    'ExpressionAttributeNames'=> [ '#id' => 'ID' ],
+    'ExpressionAttributeValues'=> $eav
+];
+
+$maxid = 0;
+
+try {
+    while (true) {
+        $result = $dynamodb->scan($params);
+        echo '<table name="events_table"><tr><th>ID</th><th>Title</th><th>Description</th><th>Start</th><th>End</th><th>Delete</th></tr>';
+        foreach ($result['Items'] as $i) {
+            
+            $event = $marshaler->unmarshalItem($i);
+            if($event['ID']>=$maxid){
+              $maxid = $event['ID'] + 1;
+            }
+            echo '<tr><td>'. $event['ID'] .'</td><td>'. $event['title'] .'</td><td>'. $event['description'] .'</td><td>'. $event['start_time'] .'</td><td>'. 
+            $event['end_time'] .'</td><td><form action="deleteevent.php" method="post"><input id="deleteEvent" type="submit" value="X" /><input type="hidden" name="deleteid" value="'.$event['ID'].'"></form></td></tr>';
+
+        }
+        echo '</table>';
+
+
+
+
+        if (isset($result['LastEvaluatedKey'])) {
+            $params['ExclusiveStartKey'] = $result['LastEvaluatedKey'];
+        } else {
+            break;
+        }
+    }
+
+} catch (DynamoDbException $e) {
+    echo "Unable to scan:\n";
+    echo $e->getMessage() . "\n";
+}
+
+
+
+
+?>
 
 </div>
-
-
-
-<div readonly id= "textarea" style="width:400px; height:800px"></div>
-
-<br>
-<table border = 1>
-    <td>
-        <table border = 1>
-            <caption>CRUD Operations</caption>
-            <td><input id="createItem" type="button" value="Create Item" onclick="createItem();" /></td><td><input id="readItem" type="button" value="Read Item" onclick="readItem();" /></td><td><input id="updateItem" type="button" value="Update Item" onclick="updateItem();" /><td><input id="deleteItem" type="button" value="Delete Item" onclick="deleteItem();" /></td></td>
-        </table>
-    </td>
-    <td>
-        <table border = 1>
-            <caption>Query and Scan</caption>
-            <td><input id="queryData" type="button" value="Query" onclick="queryData();" /></td><td><input id="scanData" type="button" value="Scan" onclick="scanData();" /></td>
-        </table>
-    </td>
-</table>
 
 </html>
 </body>
