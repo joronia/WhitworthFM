@@ -6,6 +6,13 @@ date_default_timezone_set('UTC');
 use Aws\DynamoDb\Exception\DynamoDbException;
 use Aws\DynamoDb\Marshaler;
 
+
+if(!isset($_SESSION['authenticated'])||$_SESSION['authenticated']==0){
+  header('Location: login.php');
+  die();
+}
+
+
 ?>
 
 
@@ -371,6 +378,7 @@ function formatDate(value)
 <?php
 
 
+
 $sdk = new Aws\Sdk([
     'endpoint'   => 'https://dynamodb.us-east-2.amazonaws.com',
     'region'   => 'us-east-2',
@@ -414,10 +422,10 @@ try {
               $maxid = $event['ID'] + 1;
             }
             echo '<tr><td>'. $event['ID'] .'</td><td>'. $event['title'] .'</td><td>'. $event['description'] .'</td><td>'. $event['start_time'] .'</td><td>'. 
-            $event['end_time'] .'</td><td><input id="deleteEvent" type="button" value="X" onclick="deleteEvent('.$event['ID'].')" /></td></tr>';
+            $event['end_time'] .'</td><td><form action="deleteevent.php" method="post"><input id="deleteEvent" type="submit" value="X" /><input type="hidden" name="deleteid" value="'.$event['ID'].'"></form></td></tr>';
 
         }
-        echo '</table><div id="new-event-id">'.$maxid.'</div>';
+        echo '</table>';
 
 
 
@@ -434,15 +442,18 @@ try {
     echo $e->getMessage() . "\n";
 }
 
+
+
+
 ?>
 
 <div id="add-event-container">
-<form>
-  Event Title: <input type="text" id="title"><br>
-  Event Description: <input type="text" id="description"><br>
-
+<form action="createevent.php" method="post">
+  Event Title: <input type="text" id="title" name="title"><br>
+  Event Description: <input type="text" id="description" name="description"><br>
+  <input type="hidden" id="newid" name="newid" value="<?php echo $maxid;?>">
     Month:
-    <select id="month">
+    <select id="month" name="month">
       <option value="0">January</option>
       <option value="1">February</option>
       <option value="2">March</option>
@@ -459,7 +470,7 @@ try {
     <br>
 
     Year:
-    <select id="year">
+    <select id="year" name="year">
       <option value="2017">2017</option>
       <option value="2018">2018</option>
       <option value="2019">2019</option>
@@ -479,7 +490,7 @@ try {
 
 
     Day:
-    <select id="day">
+    <select id="day" name="day">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -516,7 +527,7 @@ try {
 
 
     Start:
-    <select id="tstart">
+    <select id="tstart" name="tstart">
       <option value="0">0:00</option>
       <option value="1">1:00</option>
       <option value="2">2:00</option>
@@ -543,7 +554,7 @@ try {
     </select>
     <br>
     End:
-    <select id="tend">
+    <select id="tend" name="tend">
       <option value="0">0:00</option>
       <option value="1">1:00</option>
       <option value="2">2:00</option>
@@ -570,9 +581,9 @@ try {
     </select>
     <br>
 
-  
+  <input type="submit" value="Submit">
 </form>
-<input type="button" value="Submit" onclick="createNewEvent()">
+
 
 </div>
 

@@ -8,14 +8,6 @@ use Aws\DynamoDb\Marshaler;
 
 session_start();
 
-if ($_SESSION['authenticated'] == true) {
-   include('admin-panel.php');
-   die();
-   
-} else {
-    header('Location: login.php');
-
-}
 
     $sdk = new Aws\Sdk([
         'endpoint'   => 'https://dynamodb.us-east-2.amazonaws.com',
@@ -58,12 +50,18 @@ if ($_SESSION['authenticated'] == true) {
         }
 
         if(isset($_POST["name"])&&isset($_POST["pass"])&&$_POST["pass"]==$result['Item']['password']['S']){
-            $_SESSION['authenticated'] = true;
-            include('admin-panel.php');
+            $_SESSION['authenticated'] = 1;
+            header('Location: auth.php');
+        }else{
+            echo 'Invalid credentials.';
+            header('Location: login.php');
 
         }
+            
     }else{
+        echo 'Invalid credentials.';
         header('Location: login.php');
+
     }
 
 
