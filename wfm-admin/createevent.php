@@ -16,6 +16,7 @@ $sdk = new Aws\Sdk([
     ]
 ]);
 
+
 $dynamodb = $sdk->createDynamoDb();
 $marshaler = new Marshaler();
 
@@ -57,7 +58,6 @@ if(isset($start)&&isset($end)){
             "description": "' . $description . '",
             "end_time": "' . $end . '",
             "start_time": "' . $start . '"
-            
         }
     ');
 
