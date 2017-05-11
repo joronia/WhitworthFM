@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import events from './events';
+import ScheduleEvent from './schedule_event';
 
 
 class Schedule extends Component {
+  
   constructor(props) {
-    super(props);
+    super(props);    
+    console.log(this.props.items)
+    if(this.props.items) {
+      eventItems = this.props.items.map((event) => {
+        return <ScheduleEvent event={event} />
+      }); 
+    }
   }
 
   render() {
@@ -41,13 +48,10 @@ class Schedule extends Component {
               src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIEZpcmV3b3JrcyAxMCwgRXhwb3J0IFNWRyBFeHRlbnNpb24gYnkgQWFyb24gQmVhbGwgKGh0dHA6Ly9maXJld29ya3MuYWJlYWxsLmNvbSkgLiBWZXJzaW9uOiAwLjYuMSAgLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyBpZD0iVW50aXRsZWQtUGFnZSUyMDEiIHZpZXdCb3g9IjAgMCAxOCAyNyIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6I2ZmZmZmZjAwIiB2ZXJzaW9uPSIxLjEiDQoJeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSINCgl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE4cHgiIGhlaWdodD0iMjdweCINCj4NCgk8ZyBpZD0iTGF5ZXIlMjAxIj4NCgkJPHBhdGggZD0iTSAxLjUgMjUuMDc5MSBMIDE3IDEzLjA5NCBMIDEuNSAxLjEyNDUgTCAxLjM0MzggMSAiIHN0cm9rZT0iIzliOWI5YiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+DQoJPC9nPg0KPC9zdmc+" />
             </div>
             <div className="list">
-              <div ng-repeat="s in currentShows | orderBy: 'start'" className="item flex center-vertical">
-                <img src='/src/img/album-error.png'/>
-                <div className="flex flex-column flex-one space-between">
-                  <h4>A title</h4>
-                  <h5 className="accent">3:00 - 4:00</h5>
-                  <h5>Some Hosts</h5>
-                </div>
+              <div className="item flex center-vertical">
+                <ul className="col-md-4 list-group">
+               
+                </ul>                                
               </div>
             </div>
           </div>

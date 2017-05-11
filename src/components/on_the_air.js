@@ -1,10 +1,46 @@
 import React, { Component } from 'react';
 import StaticBackground from './static_background';
 import Schedule from './schedule';
+import 'aws-sdk/dist/aws-sdk';
 
 class OnTheAir extends Component {
   constructor(props) {
     super(props);
+    
+    this.state = {
+      events: []
+    };
+    
+    const AWS = window.AWS;
+    AWS.config.update({
+      region: 'us-east-2',
+      endpoint: 'https://dynamodb.us-east-2.amazonaws.com',
+      version: 'latest',
+      accessKeyId: 'AKIAILI4WEMNUBJO2KEA',
+      secretAccessKey: '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'      
+    });
+    
+    
+    var docClient = new AWS.DynamoDB.DocumentClient();
+    
+    var params = {
+      TableName: "schedule"
+    };
+    
+    docClient.scan(params, this.onScan); 
+  }
+  
+  onScan = (err, data) => {
+    if(err) {
+      console.error("Unable to scan the table. Error JSON:", JSON.stringify(err, null, 2));
+    } else {
+       // print all the movies
+        console.log("Scan succeeded.");        
+        this.setState({events: data});
+        data.Items.forEach(function(event) {
+          
+        });        
+    }
   }
 
 
@@ -20,7 +56,7 @@ class OnTheAir extends Component {
 	        </div>
         </div>
         <div className="schedule"> 
-          <Schedule />
+          <Schedule items={this.state.events}/>
         </div>
     </div>
     );
