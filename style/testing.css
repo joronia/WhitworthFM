@@ -519,11 +519,11 @@ iframe {
 
 .facebookFeed {
 	padding-Top: 2vh;
-	height: 80%;
+	height: 75%;
 }
 
 .radio-feed {
-  height: 20%;
+  height: 25%;
 }
 
 @media screen and (max-width: 1900px) {
