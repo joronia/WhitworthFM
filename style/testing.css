@@ -547,4 +547,20 @@ iframe {
   }
 }
 
+@media only screen and (max-width: 768px) {
+	[class*="col-"] {
+		width: 100%;
+	}
+	.player {
+		float: left;
+		margin: 0 auto;
+		height: 80%;
+		margin-top: 14vh;
+		display: inline-block;
+	}
+	.schedule {
+		display: none;
+	}
+}
+
 @media screen and (max-height: 984px)

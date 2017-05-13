@@ -8,7 +8,7 @@ class OnTheAir extends Component {
     super(props);
     
     this.state = {
-      events: []
+      //events: []
     };
     
     const AWS = window.AWS;
@@ -36,9 +36,9 @@ class OnTheAir extends Component {
     } else {
        // print all the movies
         console.log("Scan succeeded.");        
-        this.setState({events: data});
+        //this.setState({events: data});
         data.Items.forEach(function(event) {
-          
+          console.log(event);
         });        
     }
   }
